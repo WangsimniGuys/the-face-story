@@ -1,0 +1,19 @@
+{
+  "name": "the_face_story_workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:web": "npm run dev -workspace=@the-face-story/the-face-story-web-nextjs",
+    "start:app": "npm run start -workspace=@the-face-story/the-face-story-webview-rn",
+    "start:ios": "npm run ios -workspace=@the-face-story/the-face-story-webview-rn",
+    "start:android": "npm run android -workspace=@the-face-story/the-face-story-webview-rn"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "apps/the-face-story-web",
+    "apps/TheFaceStory_WebView"
+  ]
+}
