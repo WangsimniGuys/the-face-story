@@ -1,7 +1,5 @@
-
-
-function Page({ id }: { id: string }) {
-  return <div>{id}</div>;
+function Page() {
+  return <div>admin page</div>;
 }
 
 export default Page;

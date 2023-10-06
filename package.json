@@ -8,7 +8,8 @@
     "start:web": "npm run dev -workspace=@the-face-story/the-face-story-web-nextjs",
     "start:app": "npm run start -workspace=@the-face-story/the-face-story-webview-rn",
     "start:ios": "npm run ios -workspace=@the-face-story/the-face-story-webview-rn",
-    "start:android": "npm run android -workspace=@the-face-story/the-face-story-webview-rn"
+    "start:android": "npm run android -workspace=@the-face-story/the-face-story-webview-rn",
+    "build:next": "npm run build -workspace=@the-face-story/the-face-story-web-nextjs"
   },
   "author": "",
   "license": "ISC",
