@@ -9,6 +9,8 @@ import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {StyleSheet, Text, useColorScheme, View} from 'react-native';
 import {WebView} from 'react-native-webview';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
@@ -42,9 +44,24 @@ function Section({children, title}: SectionProps): JSX.Element {
   );
 }
 
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+    </View>
+  );
+}
+
+const Stack = createNativeStackNavigator();
+
 function App(): JSX.Element {
   return (
-    <WebView source={{uri: 'https://reactnative.dev/'}} style={{flex: 1}} />
+    // <WebView source={{uri: 'https://the-face-story.vercel.app/'}} style={{flex: 1}} />
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
